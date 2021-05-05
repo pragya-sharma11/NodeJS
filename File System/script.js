@@ -6,5 +6,5 @@ const fs = require('fs')
  //can also write fs.writeFile('filename', txt)
  const data = fs.readFileSync('helloword.txt')
  
- console.log(data)
- console.log(data.toString())
+ console.log(data) //buffer will be printed!!
+ console.log(data.toString()) // actual data in file will be printed!!
