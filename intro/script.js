@@ -1,2 +1,3 @@
 const lib = require('./lib.js')
-console.log(lib.awesomeFunction())
+console.log(lib)
+lib.awesomeFunction()
