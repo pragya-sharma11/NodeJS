@@ -17,7 +17,8 @@ const fs = require('fs')
  
  fs.readFile(__dirname+'/file.txt', function (err, data){
     if(err) throw err
-    console.log(data)
+    console.log(data)//print buffer
+    console.log(data.toString()) //print data
  })
  //fs.writeFile and fs.readFile both are asynchronous functions so
  //we can't write it like
