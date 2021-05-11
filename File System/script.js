@@ -14,7 +14,8 @@ const fs = require('fs')
      if(err) throw err
      console.log("File has been written.")
  })
- fs.writeFile(__dirname+'/file.txt', function (err, data){
+ 
+ fs.readFile(__dirname+'/file.txt', function (err, data){
     if(err) throw err
     console.log(data)
  })
