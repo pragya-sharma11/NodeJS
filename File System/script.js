@@ -9,8 +9,18 @@ const fs = require('fs')
  console.log(data) //buffer will be printed!!
  console.log(data.toString()) // actual data in file will be printed!!
 
- fs.writeFileSync(__dirname+'/file.txt', "something something!!",function (err){
+ fs.writeFile(__dirname+'/file.txt', "something something!!",function (err){
      //__dirname is used to create a txt file in the same directory in which the current script is present or not.
      if(err) throw err
      console.log("File has been written.")
  })
+ fs.writeFile(__dirname+'/file.txt', function (err, data){
+    if(err) throw err
+    console.log(data)
+ })
+ //fs.writeFile and fs.readFile both are asynchronous functions so
+ //we can't write it like
+ //let a = fs.writeFile(...)
+ //this way is wrong!!!
+
+
