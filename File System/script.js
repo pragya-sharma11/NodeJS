@@ -9,7 +9,7 @@ const fs = require('fs')
  console.log(data) //buffer will be printed!!
  console.log(data.toString()) // actual data in file will be printed!!
 
- fs.writeFileSync(__dirname+'file.txt', "something something!!",function (err){
+ fs.writeFileSync(__dirname+'/file.txt', "something something!!",function (err){
      if(err) throw err
      console.log("File has been written.")
  })
