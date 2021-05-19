@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 app.get('/',(req, res)=>{
     res.send('<h1 style="color:red;">Hello World</h1>')//response
-    
+    res.send("Hello I am pragya!!!")  
+    //can send plain text or html code.
 })
 app.listen(4444, ()=>{
     console.log('server started on http://localhost:4444') //4444 is port.
