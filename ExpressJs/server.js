@@ -7,6 +7,7 @@ app.get('/',(req, res)=>{
 })
 app.get('/greet', (req,res)=>{
     console.log(req.headers)
+    //these headers basically tell the type of requests accepted
     res.send('<h1>Good Morning</h1>')
 })
 app.listen(4444, ()=>{
