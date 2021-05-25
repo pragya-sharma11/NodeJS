@@ -5,9 +5,11 @@ app.get('/',(req, res)=>{
     res.send("Hello I am pragya!!!")  
     //can send plain text or html code.
 })
+//req,res = query variables.
 app.get('/greet', (req,res)=>{
     console.log(req.headers)
     //these headers(key value pairs) basically tell the type of requests accepted
+    console.log(req)
     res.send('<h1>Good Morning</h1>')
 })
 app.listen(4444, ()=>{
