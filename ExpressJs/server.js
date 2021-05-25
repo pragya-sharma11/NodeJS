@@ -18,6 +18,8 @@ app.get('/greet/holi', (req,res)=>{
         person=req.query.person
     }
     res.send("Happy Holi "+ person)
+    //localhost:4444/greet/holi?person=Pragya---->Happy Holi Pragya
+    //localhost:4444/greet/holi----> Happy Holi Guest
 })
 app.listen(4444, ()=>{
     console.log('server started on http://localhost:4444') //4444 is port.
