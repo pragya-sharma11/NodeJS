@@ -6,7 +6,7 @@ app.get('/',(req, res)=>{
     //can send plain text or html code.
 })
 app.get('/greet', (req,res)=>{
-    console.log(res.header)
+    console.log(req.headers)
     res.send('<h1>Good Morning</h1>')
 })
 app.listen(4444, ()=>{
