@@ -13,5 +13,5 @@ formApp.get('/holi',(req,res)=>{
 })
 
 formApp.get('/form',(req,res)=>{
-    res.sendFile(__dirname + '/files/WishingForm')
+    res.sendFile(__dirname + '/files/WishingForm.html')
 })
