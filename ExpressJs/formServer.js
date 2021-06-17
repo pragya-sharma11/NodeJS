@@ -34,7 +34,10 @@ formApp.get('/:city/welcome',(req,res)=>{
     res.send('welcome to '+req.params.city + " !!")
 })
 //:city - here it means, city is a variable path nsme . Anything written in urlpath inplace of city is considered.
-
+formApp.get('/:city/:greeting',(req,res)=>{
+    res.send(req.params.greeting +" to "+req.params.city)
+})
+//it we make two siilar path with diffrent name for above format , the first one will be given the preference.
 formApp.get('/wishes/morning', (req,res)=>{
     res.send("good morning")
 })
