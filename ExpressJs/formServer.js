@@ -11,3 +11,7 @@ formApp.get('/holi',(req,res)=>{
     }
     res.send("Happy Holi "+name)
 })
+
+formApp.get('/form',(req,res)=>{
+    res.sendFile(__dirname + '/files/WishingForm')
+})
