@@ -29,3 +29,8 @@ formApp.post('/holi',(req,res)=>{
 formApp.get('/form',(req,res)=>{
     res.sendFile(__dirname + '/files/WishingForm.html')
 })
+
+formApp.get('/:city/welcome',(req,res)=>{
+    res.send('welcome to '+req.params.city + " !!")
+})
+//:city - here it means, city is a variable path nsme . Anything written in urlpath inplace of city is considered.
