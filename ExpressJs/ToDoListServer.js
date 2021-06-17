@@ -8,10 +8,13 @@ app.get('/',(req,res)=>{
     res.send(`
     <html>
     <body>
-    <form>
-    <input name='task'>
+    <form action='/' method='POST'>
+    <input name='newtask'>
     <button type='submit'>Add</button>
     </form>
+    <ul>
+        <li>Sample Task</li>
+    </ul>
     </body> 
     </html>
     `)
