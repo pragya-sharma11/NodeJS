@@ -3,6 +3,8 @@ let formApp=express()
 formApp.listen('4444',()=>{
     console.log("server started on localhost:4444")
 })
+formApp.use(express.urlencoded({extended : true}))
+//this above function runs before the get , post push etc methods.
 
 formApp.get('/holi',(req,res)=>{
     let name = "The Anonymous You"
