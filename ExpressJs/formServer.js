@@ -38,3 +38,11 @@ formApp.get('/:city/welcome',(req,res)=>{
 formApp.get('/wishes/morning', (req,res)=>{
     res.send("good morning")
 })
+
+formApp.get('/holi/getColor',(req,res)=>{
+    let color='red'
+    if(req.query.color){
+        color=req.query.color
+    }
+    res.send(" Enjoy the color "+color+" of holi !!!")
+})
