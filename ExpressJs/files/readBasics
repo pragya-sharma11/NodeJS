@@ -1,0 +1,20 @@
+things in nodejs but not in browser:-
+module, process, global
+things in browser not in nodejs:-
+Documnet object model(DOM), window object model(WOM)
+
+Why this is called DOM?
+Because our browser is built in c/c++, and javascript is working inside browser.
+What is running in browser is the native process whic directly runs on CPU but their are some functionalities which is 
+accessible to the javascript.Javascript is runnig inside browser.We can't termiate any process on browserbut we can navigate to another page.We can use javascript to do some of the tasks on browser.
+like:-
+window.location="https://www.google.com" to navigate to the another page.
+so we call it window object model.our browser process is accessible to us as a javascript object.
+An object which models the existence of browser.
+our document is the page which is visible to us and we can interact with it using javascript objects.so,
+our document is represented to us as a javascript object.
+javascript doesn't have access to browser process, coz user may kill the process.
+
+gobalThis-is in both browser and in nodejs.to take the access of global scope.
+node js:--- globalThis == global true
+browser:---globalThis==window. true
