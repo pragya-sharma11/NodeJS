@@ -5,3 +5,5 @@ if(typeof window != 'undefined'){
 else{
     console.log('running in node js.')
 }
+const lib=require('./lib')
+lib.awesomeFunction("Mr.Bean")
