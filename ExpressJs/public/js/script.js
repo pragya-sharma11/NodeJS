@@ -1,3 +1,3 @@
-window.onload(()=>{
-    alert("welcome to : "+window.location.href)
-})
+window.onload=function(){
+    window.alert("welcome to : "+window.location.href)
+}

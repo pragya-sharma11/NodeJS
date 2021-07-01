@@ -27,3 +27,4 @@ app.use('/xyz',express.static(__dirname +'/public'))
 app.get('/',(req,res)=>{
     res.send("Hello world!!")
 })
+
