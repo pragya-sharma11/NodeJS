@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
 app.get('/',(req,res)=>{
-    res.send("Hello world!!");
+    let user ='guest'
+    if(req.query.name){ //:4321?name=Pragya
+        user = req.query.name
+    res.send("Hello world!!"+user);
+    }
 })
 
 app.listen(4321,()=>{
