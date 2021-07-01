@@ -9,8 +9,9 @@ function m1(req,res,next){
     next()
 }
 function m2(req,res,next){
-    console.log("middleware 2")
     next()
+    console.log("middleware 2")
+    
 }
 function m3(req,res,next){
     next()
