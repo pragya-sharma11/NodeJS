@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
 app.get('/',(req,res)=>{
-    let user ='guest'
-    if(req.query.name){ //:4321?name=Pragya
-        user = req.query.name
-    res.send("Hello world!!"+user);
+    let name ='guest'
+    if(req.query.user){ //:4321?name=Pragya
+        name = req.query.user
+    res.send("Hello world!!"+name);
     }
 })
 
