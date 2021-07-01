@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-app.get('/',(req,res)=>{
+app.get('/hello',(req,res)=>{
     let name ='guest'
     if(req.query.user){ //:4321?name=Pragya
         name = req.query.user
-    res.send("Hello world!!"+name);
+    res.send("Hello Dear!!"+name);
     }
 })
 
@@ -24,3 +24,6 @@ app.use('/xyz',express.static(__dirname +'/public'))
  * if no match in xyz then 'can not GET' msg .
 */
 
+app.get('/',(req,res)=>{
+    res.send("Hello world!!")
+})
