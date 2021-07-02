@@ -8,7 +8,7 @@ app.get('/hello',(req,res)=>{
     }
 })
 
-app.listen(4321,()=>{
+app.listen(4322,()=>{
     console.log('server is on http://localhost:4321')
 })
 
