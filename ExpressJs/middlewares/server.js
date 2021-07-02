@@ -26,8 +26,10 @@ function m5(req,res,next){
     console.log("middleware 5")
     next()
 }
-app.get('/',m2,m3,(req,res)=>{
+app.get('/',m1,m2,m3,m4,m5,(req,res)=>{
+    console.log('pre-send')
     res.send("Hello World!!")
+    console.log('post-send')
 })
 //get can accept so many parameters but first will always be path
 /**
@@ -35,4 +37,8 @@ app.get('/',m2,m3,(req,res)=>{
  * then first the call to next middle ware is done, if any middleware is next in parameters
  * then the statements which are written after next will execute.
  * its like recursion stack. 
+ * we use middlewares for processing data even after sending respose.
+ * this can be used to save logs, save progress of a student in any course.
+ * like video is marked as completed when we watch it completely.
+ * or we can used analytics on data using middlewares.
  */
