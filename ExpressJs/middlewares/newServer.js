@@ -8,7 +8,19 @@ app.listen(4321,()=>{
     res.send('hello!!')
 })*/
 app.use('/',express.static(__dirname +'/PublicFolder'))
-
-app.get('/eval',(req,res)=>{
+function decodeQueryBase64(req,res,next){
+    for(let q in req.query){
+        console.log(req.query[q])
+        let data = new Buffer(data, 'base64').toString('acsii')
+        req.query[q]=data //here i have changed data nd its remained changed for rest of the middlewares.
+    }
+    next()
+}
+/**
+ * if we change any data in one middleware then 
+ * data for next middleware will be changed.
+ */
+app.get('/eval',decodeQueryBase64,(req,res)=>{
     res.send("=======eval result========")
 })
+
