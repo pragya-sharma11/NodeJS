@@ -8,3 +8,7 @@ app.listen(4321,()=>{
     res.send('hello!!')
 })*/
 app.use('/',express.static(__dirname +'/PublicFolder'))
+
+app.get('/eval',(req,res)=>{
+    res.send("=======eval result========")
+})
