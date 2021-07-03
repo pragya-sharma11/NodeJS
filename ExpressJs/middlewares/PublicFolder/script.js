@@ -4,5 +4,6 @@ let btnEncode = document.getElementById('btnEncode')
 let code = document.getElementById('code')
 
 btnEncode.onclick = function(){
-    let data = 
+    let data = inpCode.value
+    data = btoa(data)
 }
