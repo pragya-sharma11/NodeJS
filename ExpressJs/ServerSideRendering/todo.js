@@ -14,6 +14,6 @@ route.post('/',(req,res)=>{
     todos.push({
         task: req.body.newtodo
     })
-    res.redirect('.')//redirect to same path
+    res.redirect('/todos')//redirect to given path
 })
 module.exports = route
