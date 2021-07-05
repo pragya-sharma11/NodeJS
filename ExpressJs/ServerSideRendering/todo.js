@@ -1,5 +1,8 @@
-const express = require('express')
-const srv = express()
-srv.listen(4444)
-srv.use(express.json())
-srv.use(express.urlencoded({extended:true}))
+const route =require('express').Router()
+route.get('/',function(req,res){
+
+})
+route.post('/',(req,res)=>{
+
+})
+module.exports = route

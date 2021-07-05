@@ -1,0 +1,8 @@
+const express = require('express')
+const srv = express()
+const todoRoute = require('/todos') 
+srv.listen(4444)
+srv.use(express.json())
+srv.use(express.urlencoded({extended:true}))
+srv,set('view engine','hbs')
+srv.use('/todos',todoRoute)
