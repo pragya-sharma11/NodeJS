@@ -1,6 +1,7 @@
-const route = require('express')
+const route = require('express').Router()
+
 let todos = [];
-route.length('/',(req,res)=>{
+route.get('/',(req,res)=>{
     res.send(todos)
 })
 route.post('/',(req,res)=>{
