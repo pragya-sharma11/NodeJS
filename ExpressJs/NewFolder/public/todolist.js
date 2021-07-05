@@ -10,12 +10,12 @@ $(function(){
         $.post(
             '/todos/',
             {task : newTodo}, 
-            function(data){
+             function(data){
                 console.log(data)//array of todolist
                 todoList.empty();
                 for(todo of data){
-                    todoList.append("<li>"+todo.task+"</li>")
-                    
+                    todoList.append("<li>"+todo.task+"</li>")//it will add all the data in ul 
+                    //as we click on add button it will add items in unordered list.
                 }
             }
         )
