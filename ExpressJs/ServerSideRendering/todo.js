@@ -11,6 +11,9 @@ route.get('/',function(req,res){
     //when we put todos it will go to todos.hbs and is todos object is an array it wll insert the elements in ul.
 })
 route.post('/',(req,res)=>{
-
+    todos.push({
+        task: req.body.newtodo
+    })
+    res.redirect('.')//redirect to same path
 })
 module.exports = route
