@@ -6,3 +6,6 @@ They both run on server.
 when client send a request , frontend sent to client
 front end runs on client machine.
 then we created an api, to interact with client.
+  
+view engine : This is used for templating
+templates are :-  a page we can say... which has header, body or footer and have some specific disions in view.
