@@ -1,0 +1,8 @@
+Here we directly send our html pages to 
+client browser without running javascript on thier machine
+Rendering:create html file from template
+there is a backend and there is a frontend
+They both run on server.
+when client send a request , frontend sent to client
+front end runs on client machine.
+then we created an api, to interact with client.
