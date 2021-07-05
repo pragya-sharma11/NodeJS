@@ -17,3 +17,7 @@ route.post('/',(req,res)=>{
     res.redirect('/todos')//redirect to given path
 })
 module.exports = route
+
+//we send a form page to client 
+//client submit the data 
+//server send a new page to client redirecting previous page.
