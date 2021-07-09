@@ -24,21 +24,21 @@ function getAllUsers(){
 function addUsers(name, age, city){
     return new Promise((resolve, reject)=>{
         connection.query(
-            'INSERT INTO person VALUES(?, ?, ?)',
+            'INSERT INTO persons VALUES(?, ?, ?)',
             [name,age, city],
             function(err,result){
                 if(err){
                     reject(err)
                 }
                 else{
-                    resolve(rows)
+                    resolve(result)
                 }
             }
         )
     })
 }
 
-exports = module.exports(()=>{
+exports = module.exports={
     getAllUsers,
     addUsers
-})
+}
