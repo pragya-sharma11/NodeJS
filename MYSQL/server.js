@@ -8,3 +8,6 @@ app.set('views',__dirname+ '/views')
 app.listen(4444,()=>{
     console.log("server started on http://localhost:4444")
 })
+app.use('/pages', require('./routes/pages').route)
+app.use('/api', require('./routes/api').route)
+app.use('/', path.join(__dirname + 'public_static'))
