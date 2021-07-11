@@ -6,8 +6,8 @@ $(()=>{
     let tbl_persons = $('#persons')
     function refresh(persons) {
         tbl_persons.empty()
-        tbl_persons.append(`
-            <tr>
+        tbl_persons.append(
+        `<tr>
             <th>Name</th>
             <th>Age</th>
             <th>City</th>
@@ -15,7 +15,7 @@ $(()=>{
         )
         for(person of persons){
             tbl_persons.append(
-                `<tr>
+            `<tr>
                 <td>${person.name}</td>
                 <td>${person.age}</td>
                 <td>${person.city}</td>
@@ -32,10 +32,12 @@ $(()=>{
         //this api basically connect front end with backend
         $.post('/api/persons',
         {
-            
+            name:inp_name,
+            age:inp_age,
+            city:inp_city
         },
         (data)=>{
-
+            refresh(data)
         })
     })
 })

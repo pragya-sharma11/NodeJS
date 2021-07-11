@@ -10,12 +10,10 @@
 </head>
 <body>
     <h3>ADD A PERSON</h3>
-    <form action="/persons" method="POST">
-        <input type="text" id="name" placeholder="Name"><br>
-        <input type="number" id="age" placeholder="Age"><br>
-        <input type="text" id="city" placeholder="City"><br>
+        <input type="text" id="name" placeholder="Name" name="name"><br>
+        <input type="number" id="age" placeholder="Age" name="age"><br>
+        <input type="text" id="city" placeholder="City" name="city"><br>
         <button id="submit" type="submit">Submit query</button><br>
-    </form>
     <table  cellspacing='10' border="2" cellpadding='5' style="margin-top: 2%;" id="persons">
         <tr>
             <th>Name</th>
