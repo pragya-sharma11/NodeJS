@@ -16,9 +16,9 @@ $(()=>{
         for(person of persons){
             tbl_persons.append(
                 `<tr>
-                <td>${persons.name}</td>
-                <td>${persons.age}</td>
-                <td>${persons.city}</td>
+                <td>${person.name}</td>
+                <td>${person.age}</td>
+                <td>${person.city}</td>
             </tr>`
             )
         }
@@ -30,6 +30,12 @@ $(()=>{
         console.log('btn clicked')
         //create api to make functioning of submit button
         //this api basically connect front end with backend
+        $.post('/api/persons',
+        {
+            
+        },
+        (data)=>{
 
+        })
     })
 })

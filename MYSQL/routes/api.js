@@ -12,7 +12,7 @@ route.get('/persons',(req,res)=>{
 route.post('/persons',(req,res)=>{
     //add persons details
     db.addUsers(req.body.name,req.body.age,req.body.city)
-    .then(()=>res.redirect("/api/"))
+    .then(()=>res.redirect("/api/persons"))
     .catch((err)=>res.send(err))
 })
 exports = module.exports={
