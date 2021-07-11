@@ -1,5 +1,6 @@
-const route = require('express').route
-const db = require('db')
+const route = require('express').Router()
+const db = require('../db')
+
 route.get('/', (req,res)=>{
     /*    res.render('person',{
         person:[

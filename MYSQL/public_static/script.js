@@ -1,8 +1,8 @@
 $(()=>{
-    let inp_name = $('$name')
-    let inp_age = $('$age')
-    let inp_city = $('$city')
-    let btn_submit = $('$submit')
+    let inp_name = $('#name')
+    let inp_age = $('#age')
+    let inp_city = $('#city')
+    let btn_submit = $('#submit')
     let tbl_persons = $('#persons')
     function refresh(persons) {
         tbl_persons.empty()
@@ -23,7 +23,9 @@ $(()=>{
             )
         }
     }
-    $.get("/api/")
+    $.get("/api/persons",(data)=>{
+        refresh(data)
+    })
     btn_submit.click(()=>{
         console.log('btn clicked')
         //create api to make functioning of submit button
