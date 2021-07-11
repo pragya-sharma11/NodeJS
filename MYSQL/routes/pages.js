@@ -25,7 +25,7 @@ route.get('/add', (req, res)=>{
 route.post('/add', (req, res)=>{
     db.addUsers(req.body.name, req.body.age, req.body.city)
     .then(()=>{
-        res.redirect('/pages')
+        res.redirect('/pages/')
     }).catch((err)=>{
         res.send(err)
     })

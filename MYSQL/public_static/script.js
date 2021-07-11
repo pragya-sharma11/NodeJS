@@ -26,18 +26,21 @@ $(()=>{
     $.get("/api/persons",(data)=>{
         refresh(data)
     })
-    btn_submit.click(()=>{
+    btn_submit.click(function(){
         console.log('btn clicked')
         //create api to make functioning of submit button
         //this api basically connect front end with backend
         $.post('/api/persons',
         {
-            name:inp_name,
-            age:inp_age,
-            city:inp_city
+            name:inp_name.val(),
+            age:inp_age.val(),
+            city:inp_city.val()
         },
-        (data)=>{
+        function (data){
             refresh(data)
-        })
+        }
+        )
+        console.log("btn end")
     })
+    
 })
