@@ -17,32 +17,7 @@ const student = db.define('Student',{ //create a table in db named Student and i
         default:-1
     }
 })
-const task = async ()=>{
-    try{
-        await db.sync()
-        //insert the row in database
-        /*await student.create({
-            name:'some name',
-            age:22
-        })*/
-        for(let i=1;i<=30;i++){
-            await student.create({
-                name :(['Qian', 'zheng', 'linye', 'moyon', 'junki', 'xiao', 
-                'gangzi', 'munyon', 'anxin', 'lyue'])[parseInt(Math.random()*10)],
-                age:(parseInt(Math.random()*10))+10
-            })
-        }
-    }
-    catch (err) {
-        console.log(err)
-    }
-}
 
-task();
-
-
-/*
 db.sync({alter:true}) //alter:true means we have already created table but if we make changes in schema code and again run the code then the same changes will reflect in the schema.
 .then(()=>console.log("Synchronised")) //we can also do force:true which will drop the existing table and made a new table.
 .catch((err)=>console.log("err"))
-*/
