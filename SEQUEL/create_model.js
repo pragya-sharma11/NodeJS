@@ -21,3 +21,7 @@ const student = db.define('Student',{ //create a table in db named Student and i
 db.sync({alter:true}) //alter:true means we have already created table but if we make changes in schema code and again run the code then the same changes will reflect in the schema.
 .then(()=>console.log("Synchronised")) //we can also do force:true which will drop the existing table and made a new table.
 .catch((err)=>console.log("err"))
+
+exports=module.exports={
+    db,student
+}
