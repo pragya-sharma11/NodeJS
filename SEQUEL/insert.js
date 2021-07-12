@@ -1,4 +1,4 @@
-const {db, student } =require('./create_model')
+const {db, student} =require('./create_model')
 const task = async ()=>{
     try{
         await db.sync()
