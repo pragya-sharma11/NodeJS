@@ -2,7 +2,7 @@ const sequelize = require('sequelize')
 const DATATYPES = sequelize.DATATYPES //defines the datatypes 
 
 const db = new sequelize('sampledb1', 'sampleuser1', 'samplepassword',{
-    host:'localhost'
+    host:'localhost',
     dialect:'mysql' 
 })
 
